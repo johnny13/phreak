@@ -23,10 +23,10 @@ return [
     | This value determines the "version" your application is currently running
     | in. You may want to follow the "Semantic Versioning" - Given a version
     | number MAJOR.MINOR.PATCH when an update happens: https://semver.org.
-    |
+    | $gitHead = exec("git rev-parse --short HEAD"); app('git.version')
     */
 
-    'version' => app('git.version'),
+    'version' => exec("git rev-parse --short HEAD"),
 
     /*
     |--------------------------------------------------------------------------
@@ -38,11 +38,11 @@ return [
     | services the application utilizes. This can be overridden using
     | the global command line "--env" option when calling commands.
     |
-    | 'env' => 'production',
+    | 'env' => 'development',
     |
     */
 
-    'env' => 'development',
+    'env' => 'production',
 
     /*
     |--------------------------------------------------------------------------

@@ -47,6 +47,9 @@ class Sixteen extends Command
      */
     public function handle()
     {
+        $gitHead = exec("git rev-parse --short HEAD");
+        print_r($gitHead);
+        exit;
         $cmds = $this->option();
 
         if (isset($cmds["image"]) && $cmds["image"] !== false) {
