@@ -3,10 +3,13 @@
 /.vscode
 /.vagrant
 .phpunit.result.cache
-.env
+# .env
 .history
 /.history
-/_INSPIRE
+_INSPIRE
 /_TODO
 /NODE_IMGs
 /Phreak_Artwork
+/libraries/node_scripts/node_modules
+output/*
+output
