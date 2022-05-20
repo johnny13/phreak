@@ -1,0 +1,19 @@
+{
+    "title": "Huement",
+    "filename": "huement",
+    "colors": {
+        "0": {
+            "033e3f": "033e3f"
+        },
+        "1": {
+            "14840c": "14840c"
+        },
+        "2": {
+            "3b2576": "3b2576"
+        }
+    },
+    "stacks": {
+        "stack_generate": false,
+        "stack_colors": false
+    }
+}

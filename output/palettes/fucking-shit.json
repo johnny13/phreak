@@ -1,0 +1,19 @@
+{
+    "title": "Fucking Shit",
+    "filename": "fucking-shit",
+    "colors": {
+        "0": {
+            "006746": "006746"
+        },
+        "1": {
+            "45206a": "45206a"
+        },
+        "2": {
+            "afb126": "afb126"
+        }
+    },
+    "stacks": {
+        "stack_generate": false,
+        "stack_colors": false
+    }
+}

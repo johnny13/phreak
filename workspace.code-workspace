@@ -1,0 +1,66 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "../phpalette"
+        },
+        {
+            "path": "../Hexadevil"
+        }
+    ],
+    "settings": {
+        "favorites.resources": [
+            {
+                "filePath": "app/Commands/Phreaks/ColorPhreaks.php",
+                "group": "Default"
+            },
+            {
+                "filePath": "app/Commands/Phreaks/PalettePhreaks.php",
+                "group": "Default"
+            },
+            {
+                "filePath": "app/Commands/Phreaks/TUI.php",
+                "group": "Default"
+            },
+            {
+                "filePath": "app/Commands/Phreaks/IconPhreaks.php",
+                "group": "Default"
+            },
+            {
+                "filePath": "app/Commands/Phreaks/DataPhreaks.php",
+                "group": "Default"
+            },
+            {
+                "filePath": "app/Commands/Phreaks/FilePhreaks.php",
+                "group": "Default"
+            },
+            {
+                "filePath": "/home/lucky/Developer/phreak/app/Commands/Phreaks",
+                "group": "Default"
+            },
+            {
+                "filePath": "/home/lucky/Developer/phreak/app/Commands",
+                "group": "Default"
+            },
+            {
+                "filePath": "/home/lucky/Developer/phreak/libraries/ascii",
+                "group": "Default"
+            },
+            {
+                "filePath": "/home/lucky/Developer/phpalette/bin/canvas.php",
+                "group": "Default"
+            },
+            {
+                "filePath": "/home/lucky/Developer/phreak/libraries/ascii/13/ascii.txt",
+                "group": "Default"
+            },
+            {
+                "filePath": "/home/lucky/Developer/phreak/libraries/ascii/13/asciibox.md",
+                "group": "Default"
+            }
+        ],
+        "todo-tree.tree.scanMode": "open files"
+    }
+}

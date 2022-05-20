@@ -1,0 +1,16 @@
+{
+    "title": "wordsmacker",
+    "filename": "wordsmacker",
+    "colors": {
+        "0": {
+            "18b65f": "18b65f"
+        },
+        "1": {
+            "229abf": "229abf"
+        }
+    },
+    "stacks": {
+        "stack_generate": false,
+        "stack_colors": false
+    }
+}

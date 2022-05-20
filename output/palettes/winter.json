@@ -1,0 +1,20 @@
+{
+    "title": "winter",
+    "filename": "winter",
+    "colors": {
+        "0": {
+            "0": "2c418b"
+        },
+        "1": {
+            "0": "db6957"
+        },
+        "2": {
+            "0": "333333",
+            "1": "CC9999"
+        }
+    },
+    "stacks": {
+        "stack_generate": false,
+        "stack_colors": false
+    }
+}

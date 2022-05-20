@@ -1,0 +1,12 @@
+/vendor
+/.idea
+/.vscode
+/.vagrant
+.phpunit.result.cache
+.env
+.history
+/.history
+/_INSPIRE
+/_TODO
+/NODE_IMGs
+/Phreak_Artwork
