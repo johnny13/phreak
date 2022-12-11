@@ -81,18 +81,23 @@ class NotePhreaks
      * @param  mixed $notes
      * @return void
      */
-    public static function noteLister($notes)
+    public static function noteLister($notes, $indent = false)
     {
         $r = array();
 
         foreach ($notes as $n) {
 
-            if (!isset(self::$Notebooks[$n["notebook_id"]]))
-                self::$Notebooks[$n["notebook_id"]] = self::getNotebookData($n["notebook_id"]);
+            //
+            // Clean Content
+            // Remove Newlines, Excessive Whitespace, Quotes
+            //
+            $string0 = str_replace("\\n", " ", $n["content"]);
+            $string1 = preg_replace('/\s+/', ' ', $string0);
+            $string2 = preg_replace("/[^a-zA-Z0-9 -]/", '', $string1);
+            $n["content"] = trim(str_replace('"', "", $string2));
 
-            // PREVIEW
+            // TITLE
             if (strlen($n["content"]) > 22) {
-                //$textTop = substr($n["content"], 0, 23);
                 $tTA = TUI::phreakWordwrap($n["content"], 23, "\n");
                 $parts = explode("\n", $tTA);
                 $textTop = self::evenOut($parts[0], 23);
@@ -104,10 +109,16 @@ class NotePhreaks
             }
 
             // TAGS
+            if (!isset(self::$Notebooks[$n["notebook_id"]]))
+                self::$Notebooks[$n["notebook_id"]] = self::getNotebookData($n["notebook_id"]);
+
             $n["nb_name"] = self::$Notebooks[$n["notebook_id"]]["name"];
+            $n["tags"] = trim(str_replace('"', "", $n["tags"]));
 
             $tagTop = (strlen($n["nb_name"]) > 9) ? substr($n["nb_name"], 0, 7) . "..." : self::evenOut($n["nb_name"], 10);
-            $tagBtm = (strlen($n["tags"]) > 9) ? substr($n["tags"], 0, 7) . "..." : self::evenOut($n["tags"], 10);
+            $tagBtm = (strlen($n["tags"]) > 9) ? substr($n["tags"], 0, 9) . "~" : self::evenOut($n["tags"], 10);
+
+            //$tagBtm = str_replace(",...", " ...", $tagBtm);
 
             // AUTHOR
             if (strlen($n["author"]) > 9) {
@@ -132,6 +143,11 @@ class NotePhreaks
             $topROW = self::evenOut($n["id"], 2) . $se . $textTop . $sp . strtoupper($tagTop) . $sp . $authorTop . $sp . $dateTop;
 
             $btmROW = "  " . $se . $textBtm . $sp . $tagBtm . $sp . $authorBtm . $sp . $dateBtm;
+
+            if ($indent !== false)
+                $topROW = $indent . $topROW;
+            if ($indent !== false)
+                $btmROW = $indent . $btmROW;
 
             $r[] = $topROW;
             $r[] = $btmROW;

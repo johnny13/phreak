@@ -41,11 +41,17 @@ class NoteListCommand extends Command
     public function handle()
     {
         $notes  = json_decode(DataPhreaks::getAllFromTable("notes"), true);
-        $string = NotePhreaks::noteLister($notes);
+
+        $string = NotePhreaks::noteLister($notes, "    ");
         $totalNotes = count($notes);
         $totalUp = $totalNotes * 4;
 
+        TUI::Break(2);
         $this->noteBox($totalNotes);
+        TUI::Break();
+        TUI::Speaks($string);
+        TUI::Break(2);
+        exit;
 
         TUI::moveCursor($this->output, "up", $totalUp);
 
@@ -73,7 +79,7 @@ class NoteListCommand extends Command
         $Boxer->setColorOutput(false);
         $Boxer->setBoxCONTENT(false);
         $Boxer->setBoxWIDTH(80);
-        $Boxer->setBoxHEIGHT($height);
+        $Boxer->setBoxHEIGHT(0);
         $Boxer->setBoxTYPE("folklore");
         $Boxer->setShowCONTENT(false);
         $Boxer->setBoxMARGIN(2);

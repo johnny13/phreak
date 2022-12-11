@@ -13,3 +13,4 @@ _INSPIRE
 output/*
 output
 OLD_README.md
+.DS_Store

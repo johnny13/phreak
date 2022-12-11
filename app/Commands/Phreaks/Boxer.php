@@ -456,6 +456,13 @@ class Boxer
             }
         }
 
+        // Catch all that shows only a cool header if the box has
+        // a height of 0 and content set to false!
+        if ($this->bHEIGHT < 1 && $this->boxCONTENT === false) {
+            $theBottom = "";
+            $theMiddle = "";
+        }
+
         return $theTop . $topTitle . $theMiddle . $theBottom;
     }
 

@@ -11,6 +11,15 @@ return [
     ],
 
     /**
+     * Creates a Phreak Command
+     */
+    'command' => [
+        'placeholder' => '@commandname',
+        'stub' => 'command.php',
+        'output_path' => base_path('app/Commands')
+    ],
+
+    /**
      * Creates a vanilla js vue2 component
      */
     'vue' => [
